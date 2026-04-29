@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquarium Heater Size Calculator | Fish Tank Wattage Guide</title>
+    <meta name="description" content="Calculate the ideal heater wattage for your aquarium based on tank volume and room temperature.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./assets/favicon/favicon-48x48.png" type="image/png">
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <img class="logo" src="./assets/logo/Logo.png" alt="Fish Tank Size Logo">
+            <p>Find the perfect heater wattage for you tropical or cold-water setup.</p>
+        </header>
+
+        <section class="card">
+            <div class="form-group">
+                <label for="unit">Unit System</label>
+                <select id="unit" aria-label="Unit System">
+                    <option value="us">Inches / Gallons / Fahrenheit</option>
+                    <option value="metric">CM / Liters / Celsius</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tank-vol">Tank Volume</label>
+                <input type="number" id="tank-vol" placeholder="e.g. 20" min="0" step="0.1"> 
+            </div>
+
+            <div class="form-group">
+                <label for="target-temp">Desired Water Temperature</label>
+                <input type="number" id="target-temp" placeholder="e.g. 78" min="0" step="0.1"> 
+            </div>
+
+            <div class="form-group">
+                <label for="room-temp">Coldest Room Temperature</label>
+                <input type="number" id="room-temp" placeholder="e.g. 68" min="0" step="0.1"> 
+            </div>
+
+            <div class="button-row">
+                <button type="button" class="btn-calculate" onclick="calculateHeater()">Calculate Wattage</button>
+                <button type="button" class="btn-clear" onclick="clearAll()">Clear All</button>
+            </div>
+
+            <div id="result" aria-live="polite"></div>
+        </section>
+
+        <section class="content-glue">
+            <h2>Choosing the Right Heater</h2>
+            <p>An undersized heater will struggle to keep you water warm during winter, while an oversized heater can be a safety risk if the thermostat fails.</p>
+            
+            <h3>The Two-Heater Rule</h3>
+            <p>For larger tanks (over 50 gallons), many hobbyists prefer using two smaller heaters instead of one large one. If one fails "on," it is less likely to overheat the tank; if one fails "off," the second heater provides a safety net.</p>
+        
+            <h3>Placement Matters</h3>
+            <ul>
+                <li><strong>Near Flow:</strong> Place your heater near the filter intake or outlet to ensure warm water is distributed evenly.</li>
+                <li><strong>Horizontal Mounting:</strong> Some heaters work better when mounted at a 45-degree angle or horizontally to prevent heat from rising directly into the thermostat.</li>
+            </ul>
+
+        </section>
+        
+        <footer class="footer-note">Perfect for hobbyists, aquascapers, and beginner tank builders.</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
