@@ -75,6 +75,7 @@ document.addEventListener('keydown', function(event) {
 
 // Clear all function
 function clearAll() {
+    document.getElementById('unit').value = 'us'
     document.getElementById('tank-vol').value = '';
     document.getElementById('target-temp').value = '';
     document.getElementById('room-temp').value = '';
